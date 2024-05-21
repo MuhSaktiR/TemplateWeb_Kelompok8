@@ -1,0 +1,653 @@
+<!-- /*
+* Template Name: Tour
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="keretaLogoNew.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Kereta Kita Website Indonesia</title>
+</head>
+
+<body>
+
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="site-navigation">
+				<a href="index.html" class="logo m-0">Kereta Kita<span class="text-primary">.</span></a>
+
+				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="booking.html">Book A Train</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#registerModal">Register</a></li>
+				</ul>
+
+				<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+					<span></span>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	 <!-- Register Modal -->
+	 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="registerModalLabel">Register</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <!-- Register Form -->
+			  <form id="registerForm">
+				<div class="row">
+				  <div class="col-md-12">
+					<div class="form-group">
+					  <label for="member_nama">Nama Lengkap</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+						<input class="form-control genInfo letter" placeholder="Nama sesuai KTP/Paspor" id="member_nama" data-error="Mohon isi Nama" required name="member_nama" type="text">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+					<div class="form-group">
+						<label for="member_title">Jenis Kelamin</label>
+						<div class="input-group">
+						  <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+						  <select class="form-control" id="member_title" name="member_title">
+							<option value="1">Laki-laki</option>
+							<option value="2">Perempuan</option>
+						  </select>
+						</div>
+						<div class="help-block with-errors text-danger"></div>
+					  </div>
+					<div class="form-group">
+					  <label for="member_notandapengenal">Nomor Identitas</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+						<input class="form-control genInfo" placeholder="No Identitas sesuai KTP/Paspor" id="member_notandapengenal" data-error="Mohon isi Nomor Identitas" minlength="1" maxlength="16" required name="member_notandapengenal" type="text">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+					<div class="form-group">
+					  <label for="member_tanggallahir">Tanggal Lahir</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-calendar-check" aria-hidden="true"></i></span>
+						<input class="form-control" id="member_tanggallahir" required data-error="Mohon isi Tanggal Lahir" placeholder="hh-bb-tttt" autocomplete="off" onkeypress="return false;" name="member_tanggallahir" type="text">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+					<div class="form-group">
+					  <label for="member_nohp">No. HP</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+						<input class="form-control number" placeholder="08xxxxx" id="member_nohp" data-error="Mohon isi No HP" required data-minlength="1" maxlength="14" name="member_nohp" type="text">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+					<div class="form-group">
+					  <label for="member_email">Email</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+						<input class="form-control" placeholder="me@contoh.co.id" id="member_email" data-error="Mohon isi Email" required name="member_email" type="email">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+					<div class="form-group">
+					  <label for="member_username">Username</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+						<input class="form-control" placeholder="Username" id="member_username" data-error="Mohon isi Username" required name="member_username" type="text">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+					<div class="form-group">
+					  <label for="member_password">Password</label>
+					  <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+						<input class="form-control" placeholder="Password" id="member_password" data-error="Mohon isi Password" required name="member_password" type="password">
+					  </div>
+					  <div class="help-block with-errors text-danger"></div>
+					</div>
+				  </div>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+		
+	
+	  <!-- Login Modal -->
+	  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="loginModalLabel">Login</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <!-- Login Form -->
+			  <form id="loginForm">
+				<div class="form-group">
+				  <label for="loginUsername">Username</label>
+				  <input type="text" class="form-control" id="loginUsername" name="loginUsername" required>
+				</div>
+				<div class="form-group">
+				  <label for="loginPassword">Password</label>
+				  <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+				</div>
+				<button type="submit" class="btn btn-primary">Login</button>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	
+
+	<div class="hero">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-7">
+					<div class="intro-wrap">
+						<h1 class="mb-5"><span class="d-block">Selamat Menikmati Perjalanan</span> Trip In <span class="typed-words"></span></h1>
+
+						<div class="row">
+							<div class="col-12">
+								<form class="form">
+									<div class="row mb-2">
+										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
+											<select name="" id="" class="form-control custom-select">
+												<option value="">Destination</option>
+												<option value="">Bandung</option>
+												<option value="">Jakarta</option>
+												<option value="">Malang</option>
+												<option value="">Yogyakarta</option>
+												<option value="">Surabaya</option>
+											</select>
+										</div>
+										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-5">
+											<input type="text" class="form-control" name="daterange">
+										</div>
+										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-3">
+											<input type="text" class="form-control" placeholder="# of People">
+										</div>
+
+									</div>    
+									<div class="row align-items-center">
+										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4">
+											<input type="submit" class="btn btn-primary btn-block" value="Search">
+										</div>
+										<div class="col-lg-8">
+											<label class="control control--checkbox mt-3">
+												<span class="caption">Save this search</span>
+												<input type="checkbox" checked="checked" />
+												<div class="control__indicator"></div>
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="slides">
+						<img src="images/surabaya.jpg" alt="Image" class="img-fluid active">
+						<img src="images/bandung.jpg" alt="Image" class="img-fluid">
+						<img src="images/jakarta.jpg" alt="Image" class="img-fluid">
+						<img src="images/malang.jpg" alt="Image" class="img-fluid">
+						<img src="images/yogyakarta.jpg" alt="Image" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="untree_co-section">
+		<div class="container">
+		  <div class="row mb-5 justify-content-center">
+			<div class="col-lg-6 text-center">
+			  <h2 class="section-title text-center mb-3">Our Services</h2>
+			  <p>Setiap layanan dirancang dengan perhatian penuh terhadap detail untuk memastikan kepuasan Anda. 
+				Bersama kami, Anda akan merasakan layanan yang tak hanya memenuhi, tetapi melampaui harapan Anda.
+			  </p>
+			</div>
+		  </div>
+		  <div class="row align-items-stretch">
+			<div class="col-lg-4 order-lg-1">
+			  <div class="h-100"><div class="frame h-100"><div class="feature-img-bg h-100" style="background-image: url('images/hero-slider-1.jpg');"></div></div></div>
+			</div>
+	
+			<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1" >
+	
+			  <div class="feature-1 d-md-flex">
+				<div class="align-self-center">
+				  <span class="flaticon-house display-4 text-primary"></span>
+				  <h3>Excellence in Travel</h3>
+				  <p class="mb-0">Percayakan perjalanan Anda kepada kami dan rasakan perbedaan dalam setiap langkah.</p>
+				</div>
+			  </div>
+	
+			  <div class="feature-1 ">
+				<div class="align-self-center">
+				  <span class="flaticon-restaurant display-4 text-primary"></span>
+				  <h3>Joy To Your Journey</h3>
+				  <p class="mb-0">Kami hadir untuk memastikan setiap momen dalam perjalanan Anda.</p>
+				</div>
+			  </div>
+	
+			</div>
+	
+			<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3" >
+	
+			  <div class="feature-1 d-md-flex">
+				<div class="align-self-center">
+				  <span class="flaticon-mail display-4 text-primary"></span>
+				  <h3>Easy to Connect</h3>
+				  <p class="mb-0">Rasakan kenyamanan Akses yang tak tertandingi, kapan pun dan di mana pun Anda berada.</p>
+				</div>
+			  </div>
+	
+			  <div class="feature-1 d-md-flex">
+				<div class="align-self-center">
+				  <span class="flaticon-phone-call display-4 text-primary"></span>
+				  <h3>24/7 Support</h3>
+				  <p class="mb-0">Kami selalu siap melayani Anda kapan pun Anda membutuhkan kami.</p>
+				</div>
+			  </div>
+	
+			</div>
+	
+		  </div>
+		</div>
+	</div>
+
+
+	<div class="untree_co-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5">
+			<div class="col-md-6 text-center">
+			  <h2 class="section-title mb-3 text-center">Kelompok 8</h2>
+			  <p>Kereta Kita dibentuk oleh 5 orang anggota yang sangat ahli dalam bidangnya masing-masing</p>
+			</div>
+		  </div>
+	  
+		  <!-- Row for the centered image at the top -->
+		  <div class="row justify-content-center mb-5">
+			<div class="col-lg-3 mb-4">
+			  <div class="team">
+				<img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4 rounded-20 mx-auto d-block">
+				<div class="px-3 text-center">
+				  <h3 class="mb-0">Muhammad Nilzam Yahya</h3>
+				  <p>NIM : 20220140073</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="row">
+			<div class="col-lg-3 mb-4">
+			  <div class="team">
+				<img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4 rounded-20">
+				<div class="px-3">
+				  <h3 class="mb-0">Muhamad Sakti Ramadhan</h3>
+				  <p>NIM : 20220140089</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-3 mb-4">
+			  <div class="team">
+				<img src="images/person_2.jpg" alt="Image" class="img-fluid mb-4 rounded-20">
+				<div class="px-3">
+				  <h3 class="mb-0">Andra Ahmad Fadhil</h3>
+				  <p>NIM : 20220140058</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-3 mb-4">
+			  <div class="team">
+				<img src="images/person_4.jpg" alt="Image" class="img-fluid mb-4 rounded-20">
+				<div class="px-3">
+				  <h3 class="mb-0">Rangga Hijriawan Haryadi</h3>
+				  <p>NIM : 20220140063</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-3 mb-4">
+			  <div class="team">
+				<img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4 rounded-20">
+				<div class="px-3">
+				  <h3 class="mb-0">Agil Imam Alhafizi</h3>
+				  <p>NIM : 20220140085</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	<div class="untree_co-section count-numbers py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="1000">0</span>
+						</div>
+						<span class="caption">No. of Travels</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="85">0</span>
+						</div>
+						<span class="caption">No. of City</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="5">0</span>
+						</div>
+						<span class="caption">No. of Employees</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="600">0</span>
+						</div>
+						<span class="caption">No. of Stasion</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="untree_co-section">
+		<div class="container">
+			<div class="row text-center justify-content-center mb-5">
+				<div class="col-lg-7"><h2 class="section-title text-center">Pemilihan Kereta</h2></div>
+			</div>
+
+			<div class="owl-carousel owl-3-slider">
+
+				<div class="item">
+					<a class="media-thumb" href="images/ekonomi.png" data-fancybox="gallery">
+						<div class="media-text">
+							<h3>Economic Class</h3>
+						</div>
+						<img src="images/ekonomi.png" alt="Image" class="img-fluid">
+					</a> 
+				</div>
+
+				<div class="item">
+					<a class="media-thumb" href="images/express.png" data-fancybox="gallery">
+						<div class="media-text">
+							<h3>Express Class</h3>
+						</div>
+						<img src="images/express.png" alt="Image" class="img-fluid">
+					</a> 
+				</div>
+
+				<div class="item">
+					<a class="media-thumb" href="images/luxury.png" data-fancybox="gallery">
+						<div class="media-text">
+							<h3>Luxury Class</h3>
+						</div>
+						<img src="images/luxury.png" alt="Image" class="img-fluid">
+					</a> 
+				</div>
+
+				<div class="item">
+					<a class="media-thumb" href="images/first.png" data-fancybox="gallery">
+						<div class="media-text">
+							<h3>First Class</h3>
+						</div>
+						<img src="images/first.png" alt="Image" class="img-fluid">
+					</a> 
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="untree_co-section">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				
+				<div class="col-lg-6">
+					<figure class="img-play-video">
+						<a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=mwtbEGNABWU" data-fancybox>
+							<span></span>
+						</a>
+						<img src="images/first.png" alt="Image" class="img-fluid rounded-20">
+					</figure>
+				</div>
+
+				<div class="col-lg-5">
+					<h2 class="section-title text-left mb-4">Take a look at Kereta Kita Video</h2>
+					<p>Nikmati perjalanan yang mengesankan dengan kenyamanan terbaik bersama kami. </p>
+
+					<p class="mb-4">Dengan layanan yang ramah dan fasilitas yang modern, kami berkomitmen untuk menyediakan pengalaman perjalanan yang menyenangkan dan tak terlupakan bagi Anda.</p>
+
+					<ul class="list-unstyled two-col clearfix">
+						<li>Pembelian Tiket Online</li>
+						<li>Jadwal Kereta Api</li>
+						<li>Kemudahan Akses</li>
+						<li>Layanan Pelanggan</li>
+					</ul>
+
+					<p><a href="#" class="btn btn-primary">Get Started</a></p>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="py-5 cta-section">
+		<div class="container">
+		  <div class="row text-center">
+			<div class="col-md-12">
+			  <h2 class="mb-2 text-white">Mulai Booking Kereta Kita Sekarang Juga!</h2>
+			  <p class="mb-4 lead text-white text-white-opacity">Booking Sekarang dan Dapatkan Promo Yang Tidak Terduga</p>
+			  <p class="mb-0"><a href="booking.html" class="btn btn-outline-white text-white btn-md font-weight-bold">Booking Now</a></p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	<div class="site-footer">
+		<div class="inner first">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-6 col-lg-4">
+				<div class="widget">
+				  <h3 class="heading">About Kereta Kita</h3>
+				  <p></p>
+				</div>
+				<div class="widget">
+				  <ul class="list-unstyled social">
+					<li><a href="#"><span class="icon-twitter"></span></a></li>
+					<li><a href="#"><span class="icon-instagram"></span></a></li>
+					<li><a href="#"><span class="icon-facebook"></span></a></li>
+					<li><a href="#"><span class="icon-google"></span></a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="col-md-6 col-lg-2 pl-lg-5">
+				<div class="widget">
+				  <h3 class="heading">Pages</h3>
+				  <ul class="links list-unstyled">
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="col-md-6 col-lg-2">
+				<div class="widget">
+				  <h3 class="heading">Resources</h3>
+				  <ul class="links list-unstyled">
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="col-md-6 col-lg-4">
+				<div class="widget">
+				  <h3 class="heading">Contact</h3>
+				  <ul class="list-unstyled quick-info links">
+					<li class="email"><a href="#">keretakita@mail.com</a></li>
+					<li class="phone"><a href="#">+62 812 8652 9634</a></li>
+					<li class="address"><a href="#">Universitas Muhammadiyah Yogyakarta Teknologi Informasi</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
+
+		<div class="inner dark">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
+						<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co" class="link-highlight">Untree.co</a> <!-- License information: https://untree.co/license/ -->Distributed By <a href="https://themewagon.com" target="_blank" >ThemeWagon</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/daterangepicker.js"></script>
+	<script src="js/typed.js"></script>
+  
+	<script>
+	  $(document).ready(function() {
+		// Register Form Submission
+		$('#registerForm').submit(function(e) {
+		  e.preventDefault();
+		  var username = $('#registerUsername').val();
+		  var password = $('#registerPassword').val();
+		  // Perform registration logic here (e.g., AJAX request)
+		  console.log('Registering user:', username);
+		  // Close modal after registration
+		  $('#registerModal').modal('hide');
+		});
+  
+		// Login Form Submission
+		$('#loginForm').submit(function(e) {
+		  e.preventDefault();
+		  var username = $('#loginUsername').val();
+		  var password = $('#loginPassword').val();
+		  // Perform login logic here (e.g., AJAX request)
+		  console.log('Logging in user:', username);
+		  // Close modal after login
+		  $('#loginModal').modal('hide');
+		});
+	  });
+	</script>
+	<script>
+		$(function() {
+			var slides = $('.slides'),
+			images = slides.find('img');
+
+			images.each(function(i) {
+				$(this).attr('data-id', i + 1);
+			})
+
+			var typed = new Typed('.typed-words', {
+				strings: ["Surabaya."," Bandung."," Jakarta.", " Malang.", "Yogyakarta."],
+				typeSpeed: 80,
+				backSpeed: 80,
+				backDelay: 4000,
+				startDelay: 1000,
+				loop: true,
+				showCursor: true,
+				preStringTyped: (arrayPos, self) => {
+					arrayPos++;
+					console.log(arrayPos);
+					$('.slides img').removeClass('active');
+					$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
+				}
+
+			});
+		})
+	</script>
+
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>

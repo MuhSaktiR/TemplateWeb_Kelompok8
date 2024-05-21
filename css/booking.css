@@ -1,0 +1,45 @@
+.booking-section .booking-form {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.booking-section .card-header {
+    background-color: #1A374D;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+}
+
+.booking-section .card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.booking-section .card-body {
+    padding: 20px;
+}
+
+.booking-section .form-group label {
+    font-weight: bold;
+    color: #1A374D;
+}
+
+.booking-section .form-control {
+    border: 1px solid #1A374D;
+    border-radius: 5px;
+}
+
+.booking-section .btn {
+    background-color: #1A374D;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.booking-section .btn:hover {
+    background-color: #0056b3;
+}
